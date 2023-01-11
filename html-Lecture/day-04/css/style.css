@@ -1,0 +1,21 @@
+/*css cascading style sheet*/
+
+body {
+  font-family: "Carter One", cursive;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+h1 {
+  color: green;
+  font-weight: 400;
+}
+
+a {
+  color: steelblue;
+  /* a태그는 부모로부터 color 상속받지 않아서 따로 지정해야함 */
+}
+
+input {
+  font-family: "궁서";
+  /* input 태그는 부모로부터 font-family 상속받지 않아서 따로 지정해야함 */
+}

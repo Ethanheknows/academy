@@ -1,0 +1,88 @@
+body {
+  font-family: "Lato", "Pretendard", sans-serif;
+  font-size: 16px;
+  color: #111;
+  /* background-color: #111; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+p {
+  line-height: 1.5;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  color: white;
+  height: 70px;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* 헤더 안에서 가운데 정렬 */
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  box-sizing: border-box;
+}
+
+header h1 a img {
+  height: 40px;
+}
+
+.gnb__bar {
+  background-color: brown;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+.gnb__bar > li {
+  position: relative;
+}
+
+.gnb__bar li {
+  display: flex;
+}
+
+.gnb__bar > li > a {
+  background-color: aqua;
+  transition: color 0.5s ease-out;
+  padding: 23px 75px;
+  display: flex;
+}
+.gnb__bar > li a:hover {
+  color: blue;
+}
+.list {
+  background-color: #fff;
+  color: #666;
+  padding: 10px;
+  font-weight: 300;
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.list li a {
+  display: block;
+  padding: 10px;
+  transition: color 0.5s ease-out;
+}
+.visual__video {
+  width: 100%;
+}

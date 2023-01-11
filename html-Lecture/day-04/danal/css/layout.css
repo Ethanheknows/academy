@@ -1,0 +1,91 @@
+body {
+  font-family: "Pretendard", "Dotum", "돋움", sans-serif;
+  color: #111;
+  font-size: 16px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none; /* a태그에 밑줄 없애줌 */
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* Black 요소를 옆으로 나란히 놓는 방법 1.float 기법 (잘안씀) 2.flex, grid
+    flex는 부모 자식의 관계에 설정 가능 
+
+
+*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* flex direction에 의해 결정된 main-axis 정렬 */
+  align-items: center;
+
+  padding-left: 50px;
+  padding-right: 50px;
+  position: fixed; /*포지션이 정해지면 위치 지정이 가능하게 됨*/
+  /*absolute는 자기 부모 기준  fiexd 화면 /바디기준*/
+  /*width: calc(100% - 100px); /*다른 단위랑 연산하게 하는 장치*/
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+header h1 a {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+header h1 a img {
+  height: 50px;
+}
+
+header nav ul {
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* inline 요소는 넓이 높이를 가지지 않는다 */
+header nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  /*margin 나를 기준으로 밖의 여백 설정*/
+  /*  padding 나를 키우는 것*/
+
+  /*border: 1px solid #f00;*/
+}
+
+header .link {
+  border: 2px solid white;
+
+  padding: 10px 20px 10px 20px; /*상 우 좌 하*/
+  border-radius: 100px 100px 100px 100px;
+
+  /*padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;*/
+}
+
+.hidden {
+  display: none;
+}
+
+main section video {
+  width: 100%;
+}

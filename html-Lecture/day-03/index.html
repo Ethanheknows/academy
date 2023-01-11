@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIS정보기술교육센터</title>
+  </head>
+  <body>
+    <header>
+      <h1>온라인 수강신청</h1>
+    </header>
+
+    <div>
+      <form action="login.html" method="post">
+        <h2>온라인 수강신청</h2>
+        <table border="1" width="800px">
+          <thead>
+            <tr>
+              <th>교육형태</th>
+              <td>
+                <select name="교육형태">
+                  <option value="교육과정선택">교육과정선택</option>
+                  <option value="취업연수과정">취업연수과정</option>
+                  <option value="직무향상 단기과정">직무향상 단기과정</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>수강과정</th>
+              <td>
+                <select name="수강과정">
+                  <option value="교육과정선택">교육과정선택</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>교육일정</th>
+              <td>
+                <input
+                  type="text"
+                  placeholder="해당 되는 교육 과정 기간 표시됨."
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>이름</th>
+              <td>
+                <input type="text" placeholder="이름을 입력해 주세요." />
+              </td>
+            </tr>
+            <tr>
+              <th>연락처</th>
+              <td>
+                <input type="text" placeholder="연락처를 입력해 주세요." />
+              </td>
+            </tr>
+            <tr>
+              <th>E-mail</th>
+              <td>
+                <input type="email" placeholder="이메일을 입력해 주세요." />
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="3">거주지(주소)</th>
+              <td>
+                <input type="text" placeholder="우편번호" readonly />
+                <button>우편번호찾기</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  placeholder="거주지(주소)를 입력해 주세요."
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  placeholder="나머지(주소)를 입력해 주세요."
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>생년월일</th>
+              <td>
+                <input type="text" placeholder="생년월일을 입력해 주세요." />
+                ex) 19981212
+              </td>
+            </tr>
+            <tr>
+              <th>성별</th>
+              <td>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  id="male"
+                /><label for="male">남자</label>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  id="female"
+                /><label for="female">여자</label>
+              </td>
+            </tr>
+            <tr>
+              <th>최종학력</th>
+              <td>
+                <input
+                  type="radio"
+                  name="학력"
+                  value="highschool"
+                  id="highschool"
+                /><label for="highschool">고등학교</label>
+                <input
+                  type="radio"
+                  name="학력"
+                  value="colleage"
+                  id="colleage"
+                /><label for="colleage">대학교(2/3년제)</label>
+                <input type="radio" name="학력" value="univ" id="univ" /><label
+                  for="univ"
+                  >대학교(4/5년제)</label
+                >
+                <input type="radio" name="학력" value="ph" id="ph" />
+                <label for="ph">대학원(석사/박사)</label>
+                <input type="radio" name="학력" value="etc" id="etc" />
+                <label for="etc">기타</label>
+              </td>
+            </tr>
+            <tr>
+              <th>학과(전공)</th>
+              <td>
+                <input type="text" placeholder="학과(전공)을 입력해 주세요." />
+              </td>
+            </tr>
+            <tr>
+              <th>직업(고용형태)</th>
+              <td>
+                <input type="radio" name="job" value="구직자" id="구직자" />
+                <label for="구직자">구직자</label>
+                <input
+                  type="radio"
+                  name="job"
+                  value="재직자"
+                  id="재직자"
+                /><label for="재직자">재직자</label>
+                <input type="radio" name="job" value="대학생" id="대학생" />
+                <label for="대학생">대학(원)생</label>
+                <input
+                  type="radio"
+                  name="job"
+                  value="개인사업자"
+                  id="개인사업자"
+                /><label for="개인사업자">개인사업자</label>
+                <input type="radio" name="job" value="기타" id="기타" /><label
+                  for="기타"
+                  >기타</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <th>국민내일배움카드 발급</th>
+              <td>
+                <label for="신청전"
+                  ><input
+                    type="radio"
+                    name="배움카드"
+                    value="신청전"
+                    id="신청전"
+                  />신청전</label
+                >
+
+                <label for="신청완료(발급중)"
+                  ><input
+                    type="radio"
+                    name="배움카드"
+                    value="신청완료(발급중)"
+                    id="신청완료(발급중)"
+                  />신청완료(발급중)</label
+                >
+                <label for="발급완료"
+                  ><input
+                    type="radio"
+                    name="배움카드"
+                    value="발급완료"
+                    id="발급완료"
+                  />발급완료</label
+                >
+                <label for="배움카드기타"
+                  ><input
+                    type="radio"
+                    name="배움카드"
+                    value="배움카드기타"
+                    id="배움카드기타"
+                  />기타</label
+                >
+              </td>
+            </tr>
+          </thead>
+        </table>
+        <div>
+          <h2>개인정보 수집 및 이용에 대한 동의 안내</h2>
+          <table border="1">
+            <tbody>
+              <tr>
+                <td>
+                  TIS정보기술교육센터 에서는 개인 또는 기업(단체)의 정보 수집 및
+                  이용 등 처리에 있어 아래의 사항을 관계법령에 따라 고지하고
+                  안내해드립니다.
+                  <ol>
+                    <li>정보수집의 이용 목적 : 상담, 신청 및 등록 진행</li>
+                    <li>
+                      수집 및 이용 항목 : 이름, 휴대전화, 이메일, 주소,
+                      생년월일, 학력 및 전공, 직업, 기타 신청정보 등
+                    </li>
+                    <li>
+                      보유 및 이용기간 : 상담 및 등록 종료후 6개월, 정보제공자의
+                      삭제 요청시 즉시
+                    </li>
+                    <li>개인정보처리담당 : 전화 02-2069-1930~1</li>
+                  </ol>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <label for="정보수집동의"
+            ><input
+              type="checkbox"
+              value="정보수집동의"
+              id="정보수집동의"
+              required
+            />개인정보 수집 및 이용에 동의합니다.</label
+          >
+          <br />
+          <button>신청하기</button><button>취소하기</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

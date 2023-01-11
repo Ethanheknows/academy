@@ -1,0 +1,140 @@
+body {
+  font-family: "Lato", "Pretendard", sans-serif;
+  font-size: 16px;
+  color: #111;
+  /* background-color: #111; */
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input,
+textarea {
+  font-family: inherit;
+}
+p {
+  line-height: 1.5;
+}
+img {
+  vertical-align: top;
+}
+.hidden {
+  display: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  color: #fff;
+  z-index: 99;
+  height: 100px;
+}
+.header .logo a {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+.header .logo a img {
+  height: 50px;
+
+  position: absolute;
+}
+
+.gnb .list {
+  display: flex;
+}
+/* a, span, em, input */
+.gnb .list > li {
+  position: relative;
+}
+.gnb .list > li > a {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  /* padding-left: 30px;
+    padding-right: 30px; */
+  padding: 0 30px;
+  transition: color 0.25s ease-out;
+}
+
+.gnb .list > li:hover > a {
+  color: #f00;
+}
+.gnb .list > li:hover .depth02 {
+  /* display: block; */
+  opacity: 1;
+  pointer-events: auto;
+}
+.gnb .list > li .depth02 {
+  background-color: #fff;
+  color: #666;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  font-weight: 700;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  pointer-events: none;
+  opacity: 0;
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
+  /* display: none; */
+}
+.gnb .list > li .depth02 li a {
+  display: block;
+  padding: 10px 0;
+}
+.gnb .list > li .depth02 li a:hover {
+  color: #111;
+}
+
+.language {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.language a {
+  margin-left: 15px;
+}
+.language .active {
+  color: rgb(4, 63, 189);
+}
+
+.visual__video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.visual__txt {
+  position: absolute;
+  color: #fff;
+  bottom: 200px;
+  left: 50px;
+  font-size: 20px;
+  /* top,left,bottom,right */
+}
+.visual__txt h3 {
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.visual__txt p {
+  margin-bottom: 30px;
+}
+
+/* 크기에 따른 css 한번 더 쓰기... */
+@media all and (max-width: 1300px) {
+  .header {
+    flex-direction: column;
+  }
+}

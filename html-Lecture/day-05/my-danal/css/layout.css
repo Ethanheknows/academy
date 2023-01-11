@@ -1,0 +1,107 @@
+body {
+  font-family: "Pretendard", "Dotum", "돋움", sans-serif;
+  color: #111;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+header {
+  font-weight: 500;
+  font-size: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+
+.logoA {
+  padding-top: 18px;
+}
+
+header h1 a img {
+  width: 100px;
+}
+
+header > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+header nav > ul {
+  display: flex;
+  justify-content: space-around;
+}
+header nav > ul > li {
+  position: relative;
+}
+header nav ul li > a:hover {
+  color: rgb(0, 162, 255);
+  transition: color 1s ease-out;
+}
+
+header nav > ul > li > a {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 10px 70px;
+}
+
+.depth02 {
+  color: #111;
+  background-color: white;
+  text-align: center;
+  font-size: 15px;
+  position: absolute;
+  width: 100%;
+  height: 300px; /*흰 부분 같게 만들려고 만든 것*/
+  box-sizing: border-box;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.depth02 li {
+  width: 125px;
+  height: 20px;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+header nav ul > li:hover > .depth02 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+header .link {
+  font-size: 15px;
+  border: 2px solid white;
+
+  padding: 10px 20px 10px 20px; /*상 우 좌 하*/
+  border-radius: 100px 100px 100px 100px;
+}
+
+main section video {
+  width: 100%;
+}

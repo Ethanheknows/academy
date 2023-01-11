@@ -1,0 +1,208 @@
+body {
+  font-family: "Lato", "Pretendard", sans-serif;
+  font-size: 16px;
+  color: #111;
+}
+.hidden {
+  display: none;
+}
+
+:root {
+  --blue: rgb(19, 137, 216);
+  --h2: 40px;
+  --h3: 32px;
+  --gray: #f9f9f9;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+p {
+  line-height: 1.5;
+}
+
+img {
+  vertical-align: top;
+  /* 이미지 여백 잡아주는 코드 */
+}
+
+.header {
+  color: white;
+  display: flex;
+  flex-direction: row; /*flex 기본값*/
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px 0 50px;
+  width: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 99;
+  height: 100px;
+  transition: all 0.5s ease;
+}
+.header.on {
+  color: #111;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.header.on a .logo--light {
+  opacity: 0;
+}
+
+.header .logo a {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo a img {
+  height: 50px;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+.header .logo a .logo--dark {
+  opacity: 0;
+}
+.header.on a .logo--dark {
+  opacity: 1;
+}
+.gnb .list {
+  display: flex;
+}
+.gnb .list > li {
+  position: relative;
+}
+.gnb .list > li > a {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  font-size: 18px;
+  font-weight: 700;
+
+  padding: 0px 30px;
+  transition: color 0.5s ease-out; /*오토메이션 느리게 거는것*/
+}
+
+.gnb .list > li:hover > a {
+  /* 가상 작동 */
+  color: var(--blue);
+  /* transition: color 0.5s ease; 오토메이션 애니매이션 느리게 거는것 */
+}
+
+.gnb .list > li > .depth02 {
+  background-color: white;
+  color: #666;
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+  margin-top: 30px;
+  position: absolute; /*???*/
+  width: 100%;
+  box-sizing: border-box;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.gnb .list > li .depth02::before {
+  content: "";
+  display: block;
+
+  height: 30px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -30px;
+}
+
+.gnb .list > li > .depth02 > a {
+  display: block;
+  padding: 10px 0;
+}
+
+.gnb .list > li:hover .depth02 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.gnb .list > li .depth02 li a {
+  display: block;
+  padding: 10px 0;
+}
+
+.gnb .list > li .depth02 li a:hover {
+  color: #111;
+}
+
+.language {
+  display: flex;
+  font-size: 18;
+  font-weight: 700;
+}
+
+.language a {
+  margin-left: 15px;
+}
+
+.language .active {
+  color: var(--blue);
+}
+
+.btn-top {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  right: 50px;
+  bottom: 50px;
+  background-color: gray;
+  color: #fff;
+  border-radius: 10px;
+  z-index: 99;
+  border: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  transform: translateY(500px);
+  transition: all 0.25s ease 0.25s;
+}
+
+.btn-top.on {
+  transform: translateY(0);
+}
+
+.footer {
+  background-color: var(--blue);
+  padding: 80px 0;
+  color: #fff;
+}
+.footer .footer-logo {
+  width: 200px;
+}
+.footer .footer-items {
+  display: flex;
+}
+.footer .footer-items .footer__item {
+  flex-grow: 1;
+}
+/* .footer .footer-items .footer__item:nth-child(2) {
+  /* flex-grow: 2; */
+
+.footer .footer-items .footer__item h2 {
+  font-size: 20px;
+}
+.footer .footer-items .footer__item dl {
+  display: flex;
+  margin-bottom: 10px;
+}
+.footer .footer-items .footer__item dl dt {
+  width: 70px;
+}
+.footer .footer-copyright {
+  margin-top: 30px;
+}

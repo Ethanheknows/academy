@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Big Hit 201110";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../font/HYBERegular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Big Hit 201110";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/HYBEBold.woff2) format("woff2");
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+body {
+  font-family: "Big Hit 201110", sans-serif;
+  font-weight: normal;
+  background-color: black;
+  color: #fff;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 30px;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+
+    box-sizing: border-box;
+    // overflow: hidden;
+    transition: all 0.25s ease;
+
+    &.on {
+      height: 450px;
+      background-color: #111;
+    }
+
+    &__logo {
+      h1 {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            padding: 32px 0;
+            width: 110px;
+            height: 22px;
+          }
+        }
+      }
+    }
+    .global-nav {
+      width: 1000px;
+      position: relative;
+      //   border-left: 1px solid #fff;
+      height: 100%;
+
+      // &:hover {
+      //   border-left: 1px solid #fff;
+      &:hover::after {
+        transform: scaleY(1);
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 30px;
+        bottom: 30px;
+        width: 1px;
+        background-color: #fff;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        transition: all 0.25s ease;
+      } // 메뉴 옆에 선 긋기
+
+      .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > li > a {
+          width: 100%;
+        }
+
+        &:hover > li > ul {
+          opacity: 1;
+          pointer-events: all;
+        }
+
+        > li {
+          font-size: 28px;
+          font-weight: 700;
+
+          padding: 30px 40px 30px 30px;
+          position: relative;
+          width: 100%;
+        }
+
+        &__depth2 {
+          font-size: 15px;
+          font-weight: 500;
+          position: absolute;
+          margin-top: 40px;
+          width: 100%;
+          height: 350px;
+          opacity: 0;
+          pointer-events: none;
+          transition: all 0.25s ease;
+
+          li {
+            margin-top: 30px;
+            width: 100%;
+
+            a {
+              position: relative;
+              padding: 10px 50px 10px 0px;
+              // background-color: aqua;
+              width: 100%;
+              top: -30px;
+              &:hover {
+                color: yellow;
+                &::after {
+                  width: 100%;
+                  left: 0;
+                  // transform: scaleX(1);
+                }
+              }
+              &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: #fff;
+                position: absolute;
+                left: 1;
+                // right: 0;
+                bottom: 0;
+                width: 0%;
+                // transform: scaleX(0);
+                transition: all 0.25s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .language {
+      display: inline;
+      align-content: center;
+      justify-content: center;
+      height: 60px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+
+      &:hover {
+        height: 250px;
+        background-color: #111;
+      }
+      &:hover > a {
+        color: yellow;
+      }
+
+      > a {
+        text-decoration: underline;
+        padding: 32px 10px;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 700;
+        width: 100%;
+      }
+
+      ul {
+        font-size: 24px;
+        font-weight: 700;
+        width: 100%;
+        li {
+          padding: 10px 10px;
+          a:hover {
+            color: yellow;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HYBE Test by ethan</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <h1>
+          <a href="https://hybecorp.com/eng/main"
+            ><img src="../img/logoW.svg" alt=""
+          /></a>
+        </h1>
+      </div>
+
+      <nav class="global-nav">
+        <h2 class="hidden">global-nav</h2>
+        <ul class="list">
+          <li>
+            <a href="">COMPANY</a>
+            <ul class="list__depth2">
+              <li>
+                <a href="" class="underline-hover-effect">Company Info.</a>
+              </li>
+              <li><a href="" class="underline-hover-effect"> Artist</a></li>
+              <li>
+                <a href="" class="underline-hover-effect"> Business</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">INVESTORS</a>
+            <ul class="list__depth2">
+              <li>
+                <a href="" class="underline-hover-effect">IR Data Room</a>
+              </li>
+              <li>
+                <a href="" class="underline-hover-effect">IR Event Schedule</a>
+              </li>
+              <li>
+                <a href="" class="underline-hover-effect">Stock Info.</a>
+              </li>
+              <li>
+                <a href="" class="underline-hover-effect">Financial Info.</a>
+              </li>
+              <li>
+                <a href="" class="underline-hover-effect"
+                  >Public Disclosure Info.</a
+                >
+              </li>
+              <li>
+                <a href="" class="underline-hover-effect">Announcement</a>
+              </li>
+              <li>
+                <a href="" class="underline-hover-effect"
+                  >Corporate Governance</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">NEWS</a>
+            <ul class="list__depth2">
+              <li><a href="" class="underline-hover-effect">NEWS</a></li>
+              <li><a href="" class="underline-hover-effect">Notice</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">CAREERS</a>
+            <ul class="list__depth2">
+              <li>
+                <a href="" class="underline-hover-effect"> HYBE DNA </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="language">
+        <a href="">ENG</a>
+        <ul class="languague__type">
+          <li><a href="">KOR</a></li>
+          <li><a href="">JPN</a></li>
+          <li><a href="">CHN</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="main swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="../img/f01JI5cTnmew4vJc7LrZTrCXWtoZ0bpFKCj1ONkY7jQjRqloGhzTrxyCIJFuVHG36MnN8ISp26876xo8R6UzwNj0orJvP5fhJ1eMEVIU7OhLEx8zAbzGO8WcAq5Ls21d.png"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="../img/bdmISlHQ1o9Yh0hEdEjBIjASMO4kwqJk9MfOv10LY4S7GtX5TceihMkYSqdCi0R2vRRmLrnZJ2DyS7CYofPfHqZlJe5F8geV8kU9naw9wqORzWJujFSwDVPlRkPd9v8M.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+      </div>
+      </section>
+    </main>
+
+    <script>
+      const header = document.querySelector(".header");
+      const gnb = document.querySelector(".global-nav");
+
+      gnb.addEventListener("mouseenter", function () {
+        //console.log("gnb에 마우스 올라감");
+        header.classList.add("on");
+      });
+      gnb.addEventListener("mouseleave", function () {
+        header.classList.remove("on");
+        zz;
+      });
+    </script>
+  </body>
+</html>

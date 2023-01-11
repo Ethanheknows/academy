@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>로그인 버튼 만들기</h2>
+
+    <form action="login.html" method="post">
+      <!-- get은 url에 실어보내기 / post는 body에 실어 보내기 -->
+      <!-- form 태그로 패스워드나 개인정보는 무조건 post로  -->
+
+      <div>
+        <label for="userID">ID</label>
+        <input
+          type="text"
+          name="id"
+          id="userID"
+          placeholder="아이디를 입력하세요."
+          required
+        />
+      </div>
+      <!-- name  네임으로 실려오게 되니깐 중요함  -->
+
+      <div>
+        <label for="userPW">PW</label>
+        <input
+          type="password"
+          name="pwd"
+          id="userPW"
+          placeholder="비밀번호를 입력하세요."
+          required
+        />
+        <!-- 인풋 태그와 라벨 태그 아이디를 지정하면 접근성이 높아짐 -->
+      </div>
+
+      <div>
+        <!-- 버튼 만드는 태그 -->
+        <button type="submit">로그인</button>
+        <!-- 버튼 타입 디폴트 값은 subimt으로 되있음  -->
+        <button type="reset">취소</button>
+        <!-- 취소 혹은 리셋 버튼을 만드려면 타입을 reset으로 설정 -->
+      </div>
+
+      <p>관심분야 선택</p>
+
+      <!-- prettier-igrore -->
+      <div>
+        <!-- 다중선택 가능한 체크박스 -->
+        <label for="movie">영화</label
+        ><input type="checkbox" id="movie" name="interest" value="영화" />
+        <!-- 인풋 태그와 라벨 태그 아이디를 지정하면 접근성이 높아짐 -->
+        <label for="read">독서</label
+        ><input type="checkbox" id="read" value="독서" />
+        <label for="gou">바둑</label
+        ><input type="checkbox" id="gou" value="바둑" />
+        <label><span>낚시</span><input type="checkbox" /></label>
+        <!--이러한 방법도 있다. id 태그 필요없음-->
+      </div>
+      <!-- prettier-igrore -->
+      <div>
+        <!-- 하나 밖에 안골라지는 것 라디오 박스 -->
+        <p>성별을 입력하세요.</p>
+        <label for="male">남자</label
+        ><input type="radio" name="gender" value="male" id="male" />
+        <label for="female">여자</label
+        ><input type="radio" name="gender" value="female" id="female" />
+      </div>
+      <!-- prettier-ignore -->
+      <div>
+          <label for="year">양력</label><input type="radio" name="gender" value="양력" id="year" checked/> <!--checked 해놓으면 편하다 (거의다 양력으로 하니깐)-->
+          <label for="nyear">음력</label><input type="radio" name="gender" value="음력" id="nyear"/>
+            
+          <select name="birth" id="">
+            <!-- option*100[value="$@1910"]{$@1910} -->
+
+                <option value="1910">1910</option>
+                <option value="1911">1911</option>
+                <option value="1912">1912</option>
+                <option value="1913">1913</option>
+                <option value="1914">1914</option>
+                <option value="1915">1915</option>
+                <option value="1916">1916</option>
+                <option value="1917">1917</option>
+                <option value="1918">1918</option>
+                <option value="1919">1919</option>
+                <option value="1920">1920</option>
+                <option value="1921">1921</option>
+                <option value="1922">1922</option>
+                <option value="1923">1923</option>
+                <option value="1924">1924</option>
+                <option value="1925">1925</option>
+                <option value="1926">1926</option>
+                <option value="1927">1927</option>
+                <option value="1928">1928</option>
+                <option value="1929">1929</option>
+                <option value="1930">1930</option>
+                <option value="1931">1931</option>
+                <option value="1932">1932</option>
+                <option value="1933">1933</option>
+                <option value="1934">1934</option>
+                <option value="1935">1935</option>
+                <option value="1936">1936</option>
+                <option value="1937">1937</option>
+                <option value="1938">1938</option>
+                <option value="1939">1939</option>
+                <option value="1940">1940</option>
+                <option value="1941">1941</option>
+                <option value="1942">1942</option>
+                <option value="1943">1943</option>
+                <option value="1944">1944</option>
+                <option value="1945">1945</option>
+                <option value="1946">1946</option>
+                <option value="1947">1947</option>
+                <option value="1948">1948</option>
+                <option value="1949">1949</option>
+                <option value="1950">1950</option>
+                <option value="1951">1951</option>
+                <option value="1952">1952</option>
+                <option value="1953">1953</option>
+                <option value="1954">1954</option>
+                <option value="1955">1955</option>
+                <option value="1956">1956</option>
+                <option value="1957">1957</option>
+                <option value="1958">1958</option>
+                <option value="1959">1959</option>
+                <option value="1960">1960</option>
+                <option value="1961">1961</option>
+                <option value="1962">1962</option>
+                <option value="1963">1963</option>
+                <option value="1964">1964</option>
+                <option value="1965">1965</option>
+                <option value="1966">1966</option>
+                <option value="1967">1967</option>
+                <option value="1968">1968</option>
+                <option value="1969">1969</option>
+                <option value="1970">1970</option>
+                <option value="1971">1971</option>
+                <option value="1972">1972</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+                <option value="1976">1976</option>
+                <option value="1977">1977</option>
+                <option value="1978">1978</option>
+                <option value="1979">1979</option>
+                <option value="1980">1980</option>
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+
+
+
+
+            
+          </select>
+      </div>
+
+      <div>
+        <textarea
+          name="contents"
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="글을 입력 하세요."
+        ></textarea>
+      </div>
+      <!-- prettier-igrore -->
+      <div>
+        <input type="email" placeholder="이메일을 입력하세요" name="email" />
+      </div>
+      <!--정규 표현식-->
+
+      <br />
+
+      <div>
+        <input type="date" placeholder="날짜를 입력하세요" name="date" />
+      </div>
+    </form>
+
+    <div>
+      <ul>
+        <li><input type="button" value="확인" /></li>
+        <li><input type="checkbox" /></li>
+        <li><input type="color" /></li>
+        <li><input type="date" /></li>
+        <li><input type="datetime-local" /></li>
+        <li><input type="email" /></li>
+        <li><input type="file" /></li>
+        <li><input type="hidden" /></li>
+        <li><input type="image" /></li>
+        <li><input type="month" /></li>
+        <li><input type="number" /></li>
+        <li><input type="password" /></li>
+        <li><input type="radio" /></li>
+        <li><input type="range" /></li>
+        <li><input type="reset" /></li>
+        <li><input type="search" /></li>
+        <li><input type="submit" /></li>
+        <li><input type="tel" /></li>
+        <li><input type="text" /></li>
+        <li><input type="time" /></li>
+        <li><input type="url" /></li>
+        <li><input type="week" /></li>
+      </ul>
+    </div>
+  </body>
+</html>

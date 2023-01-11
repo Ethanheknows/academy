@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Big Hit 201110";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../font/HYBERegular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Big Hit 201110";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/HYBEBold.woff2) format("woff2");
+}
+
+body {
+  font-family: "Big Hit 201110", sans-serif;
+  font-weight: normal;
+  background-color: black;
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+.hidden {
+  display: none;
+}
+
+.header {
+  background-color: black;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* position: absolute; */
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100px;
+}
+.header a img {
+  height: 18px;
+}
+
+.global-nav {
+  width: 800px;
+}
+
+.global-nav .list {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.global-nav .list > li {
+  position: relative;
+}
+
+.global-nav .list > li > a {
+  display: block;
+  background-color: aqua;
+  margin: 30px 40px 40px 0;
+
+  width: 100%;
+  transition: all 0.25s ease;
+}
+
+.global-nav .list > li > a:hover {
+  color: #f5ff00;
+}
+
+.global-nav .list li .list__depth2 {
+  font-size: 15px;
+  font-weight: 500;
+  background-color: darkred;
+
+  position: absolute;
+  width: 100%;
+  height: 290px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.global-nav .list:hover li .list__depth2 {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.global-nav .list li .list__depth2 li {
+  margin-top: 20px;
+}
+
+/* .global-nav .list li .list__depth2 li a {
+  background-color: blueviolet;
+  padding-top: 30px;
+  width: 100%;
+} */
+
+.underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 0.25rem; /* defines the space between text and underline */
+  position: relative;
+}
+
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.2s ease-out;
+}
+.underline-hover-effect:hover::before {
+  width: 100%;
+}
+
+/* .header .header__language h3 {
+} */
+.header .header__language h3:hover {
+  text-decoration: underline;
+  color: #f5ff00;
+}
