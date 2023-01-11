@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/common.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <script src="../js/swiper-bundle.min.js"></script>
   </head>
 
   <body>
@@ -96,26 +102,69 @@
         </ul>
       </div>
     </header>
+
     <main>
-      <div class="container">
-        <section class="main swiper">
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <img
-                src="../img/f01JI5cTnmew4vJc7LrZTrCXWtoZ0bpFKCj1ONkY7jQjRqloGhzTrxyCIJFuVHG36MnN8ISp26876xo8R6UzwNj0orJvP5fhJ1eMEVIU7OhLEx8zAbzGO8WcAq5Ls21d.png"
-                alt=""
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="../img/bdmISlHQ1o9Yh0hEdEjBIjASMO4kwqJk9MfOv10LY4S7GtX5TceihMkYSqdCi0R2vRRmLrnZJ2DyS7CYofPfHqZlJe5F8geV8kU9naw9wqORzWJujFSwDVPlRkPd9v8M.jpg"
-                alt=""
-              />
-            </div>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img
+              src="../img/bdmISlHQ1o9Yh0hEdEjBIjASMO4kwqJk9MfOv10LY4S7GtX5TceihMkYSqdCi0R2vRRmLrnZJ2DyS7CYofPfHqZlJe5F8geV8kU9naw9wqORzWJujFSwDVPlRkPd9v8M.jpg"
+              alt=""
+            />
           </div>
+          <div class="swiper-slide">
+            <img
+              src="../img/f01JI5cTnmew4vJc7LrZTrCXWtoZ0bpFKCj1ONkY7jQjRqloGhzTrxyCIJFuVHG36MnN8ISp26876xo8R6UzwNj0orJvP5fhJ1eMEVIU7OhLEx8zAbzGO8WcAq5Ls21d.png"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../img/lFLOEXwXxxZzxfNtFQ7Z1yz6Uvs1fWYvXWGxOr1efsgLAr19218LjlRHIEKazW4S2YLDB4UGyc6wvUFe8RtxoiLVHD9dDoItsnnshM1zITUMAuWgxSTCGmLozYJa2aqj.png"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <iframe
+              width="1920"
+              height="937"
+              class="pc_video"
+              src="https://www.youtube.com/embed/V37TaRdVUQY?autoplay=0&amp;enablejsapi=1&amp;mute=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;controls=0&amp;loop=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+              id="216845263711"
+              data-gtm-yt-inspected-4="true"
+              title="NewJeans (뉴진스) 'Ditto' Official MV (side B)"
+            ></iframe>
+          </div>
+          <div class="swiper-slide">
+            <iframe
+              width="1920"
+              height="937"
+              class="pc_video"
+              src="https://www.youtube.com/embed/kXpOEzNZ8hQ?autoplay=0&amp;enablejsapi=1&amp;mute=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;controls=0&amp;loop=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+              id="646326315399"
+              data-gtm-yt-inspected-4="true"
+              title="BTS (방탄소년단) 'Yet To Come (The Most Beautiful Moment)' Official MV"
+            ></iframe>
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper__btn-prev btn">
+          <a href=""
+            ><span class="material-icons"> arrow_back_ios_new </span></a
+          >
+        </div>
+        <div class="swiper__btn-next btn">
+          <a href=""><span class="material-icons"> arrow_forward_ios </span></a>
+        </div>
       </div>
-      </section>
     </main>
 
     <script>
@@ -128,7 +177,18 @@
       });
       gnb.addEventListener("mouseleave", function () {
         header.classList.remove("on");
-        zz;
+      });
+
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        spaceBetween: 500,
+        navigation: {
+          nextEl: ".swiper__btn-next",
+          prevEl: ".swiper__btn-prev",
+        },
+        // autoplay: {
+        //   delay: 5000,
+        // },
       });
     </script>
   </body>
